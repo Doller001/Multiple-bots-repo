@@ -10,13 +10,13 @@ CREATE TABLE IF NOT EXISTS users (
 """)
 conn.commit()
 
-def add_user(uid):
-    cur.execute("INSERT OR IGNORE INTO users (user_id) VALUES (?)", (uid,))
+def add_user(user_id):
+    cur.execute("INSERT OR IGNORE INTO users (user_id) VALUES (?)", (user_id,))
     conn.commit()
 
 def get_all_users():
     cur.execute("SELECT user_id FROM users")
-    return [x[0] for x in cur.fetchall()]
+    return [row[0] for row in cur.fetchall()]
 
 def total_users():
     cur.execute("SELECT COUNT(*) FROM users")
