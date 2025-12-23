@@ -1,5 +1,6 @@
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler
-from handlers import start, callbacks, stats, broadcast
+from handlers import start, callbacks
+from admin import stats, broadcast
 
 BOT_TOKEN = "8236683990:AAGoq9LhffBwNHwbYfgwKaefFLHkN7q9-lI"
 
